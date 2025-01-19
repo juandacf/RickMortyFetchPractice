@@ -1,0 +1,27 @@
+*, html {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+.menuContainer{
+    height:8rem;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    font-family: "Bangers", serif;
+    font-weight:bold;
+    background-color: #00FF00;
+}
+
+.searchInput{
+    height:3rem;
+    font-family: "Bangers", serif;
+    font-size: 1.5rem;
+}
+#contentContainer{
+    width:100vw;
+}
