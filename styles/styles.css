@@ -17,11 +17,24 @@
     background-color: #00FF00;
 }
 
-.searchInput{
+#searchInput{
     height:3rem;
     font-family: "Bangers", serif;
     font-size: 1.5rem;
 }
 #contentContainer{
     width:100vw;
+    display:flex;
+    flex-wrap: wrap;
+}
+.cardContainer {
+    width: 20rem;
+    margin:2rem;
+    box-shadow: inset;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.cardTitle{
+    text-align: center;
+    font-family: "Bangers", serif;
+    font-size:1.5rem;
 }
