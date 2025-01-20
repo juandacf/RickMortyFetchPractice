@@ -14,7 +14,7 @@
     justify-content:space-around;
     font-family: "Bangers", serif;
     font-weight:bold;
-    background-color: #00FF00;
+    background-color:#cccccc
 }
 
 #searchInput{
@@ -28,13 +28,23 @@
     flex-wrap: wrap;
 }
 .cardContainer {
+    display:flex;
+    flex-direction:column;
     width: 20rem;
     margin:2rem;
     box-shadow: inset;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+.cardContainer:hover{
+    transform: scale(1.1);
+}
 .cardTitle{
     text-align: center;
     font-family: "Bangers", serif;
     font-size:1.5rem;
+}
+
+p{
+    text-align: center;
+    font-weight: 600;
 }

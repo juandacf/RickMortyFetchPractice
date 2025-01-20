@@ -6,12 +6,7 @@
 ->first seen>
 */
 
-const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener("input", insertedValue)
-
-function insertedValue (){
-}
 
 fetch("https://rickandmortyapi.com/api/character")
 .then(response => response.json())
@@ -21,6 +16,7 @@ fetch("https://rickandmortyapi.com/api/character")
     const contentContainer = document.getElementById("contentContainer");
     const cardContainer= document.createElement("div");
     cardContainer.classList.add("cardContainer");
+    cardContainer.setAttribute("id",`element${id}`)
     contentContainer.appendChild(cardContainer)
     const cardTitle = document.createElement("h1");
     cardTitle.classList.add("cardTitle");
@@ -39,7 +35,21 @@ fetch("https://rickandmortyapi.com/api/character")
     cardSpecies.innerHTML = `Species: ${species}`;
     cardContainer.appendChild(cardSpecies);
 
-}})
+    const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", insertedValue)
+
+function insertedValue (){
+    var searchInputValue = searchInput.value.toLowerCase()
+    if(name.toLowerCase().includes(searchInputValue)){
+        cardContainer.style.display= 'flex';
+    } else if(!name.toLowerCase().includes(searchInputValue)){
+        cardContainer.style.display= 'none';
+    } 
+}
+}
+
+})
 .catch(error=> console.log(error))
 
 
